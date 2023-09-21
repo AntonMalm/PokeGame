@@ -1,5 +1,4 @@
-﻿using PokeGame;
-using PokemonCommon.Characters;
+﻿using PokemonCommon.Characters;
 using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
 using PokemonCommon.Pokemons.Attacks;
@@ -20,6 +19,6 @@ Console.WriteLine("--------------------------");
 
 Console.WriteLine(sobble.HealthPoints);
 
-BattleEngine.MakeAttack(sobble, ember);
+BattleEngine.MakeAttack(sobble, charmander.Attacks[0]);
 
 Console.WriteLine(sobble.HealthPoints);
