@@ -1,27 +1,25 @@
-﻿using PokemonCommon.Characters;
+﻿using PokeGame;
+using PokemonCommon.Characters;
+using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
-
-Trainer niklas = new Trainer();
-
-Console.WriteLine("___________________________________");
-
-Pokemon charmeleon = new Pokemon();
-
-charmeleon.Name = "Charmeleon";
-
-niklas.Catch(charmeleon);
-
-Pokemon wartorlte = new Pokemon();
-
-wartorlte.Name = "Wartortle";
-
-niklas.Catch(wartorlte);
-
-foreach (Pokemon pokemon in niklas.PokemonCollection)
-{
-    pokemon.Attack(wartorlte);
+using PokemonCommon.Pokemons.Attacks;
 
 
-    Console.WriteLine(pokemon.Name);
-    Console.WriteLine(pokemon.Type);
-}
+Trainer ash = new Trainer("Ash");
+
+Pokemon sobble = new Pokemon("Sobble", PokeTypes.Water);
+Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
+
+Ember ember = new Ember();
+charmander.LearnAttack(ember, 0);
+
+AirCutter airCutter = new AirCutter();
+sobble.LearnAttack(airCutter, 0);
+
+Console.WriteLine("--------------------------");
+
+Console.WriteLine(sobble.HealthPoints);
+
+BattleEngine.MakeAttack(sobble, ember);
+
+Console.WriteLine(sobble.HealthPoints);

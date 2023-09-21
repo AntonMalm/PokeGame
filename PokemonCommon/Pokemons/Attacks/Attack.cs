@@ -16,4 +16,6 @@ public abstract class Attack
         Name = name;
         Type = type;
     }
+    
+
 }
