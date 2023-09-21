@@ -13,8 +13,8 @@ Pokemon charmander = new Pokemon("Charmander", PokeTypes.Fire);
 Ember ember = new Ember();
 charmander.LearnAttack(ember, 0);
 
-AirCutter airCutter = new AirCutter();
-sobble.LearnAttack(airCutter, 0);
+WaterGun waterGun = new WaterGun();
+sobble.LearnAttack(waterGun, 0);
 
 Console.WriteLine("--------------------------");
 

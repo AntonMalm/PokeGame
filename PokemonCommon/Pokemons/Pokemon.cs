@@ -54,7 +54,6 @@ namespace PokemonCommon.Pokemons
             _type = type;
         }
 
-        // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
         public void LearnAttack(Attack attack, int attackIndex)
         {
             if (attackIndex > 3)
@@ -66,8 +65,8 @@ namespace PokemonCommon.Pokemons
             {
                 return;
             }
-            Attacks[attackIndex] = attack;
 
+            Attacks[attackIndex] = attack;
         }
     }
 }

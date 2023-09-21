@@ -2,9 +2,9 @@
 
 namespace PokemonCommon.Pokemons.Attacks;
 
-public class Tackle : Attack
+public class BugBite : Attack
 {
-    public Tackle() : base(20, "Tackle", PokeTypes.Normal)
+    public BugBite() : base(60, "Bug Bite", PokeTypes.Bug)
     {
     }
 }

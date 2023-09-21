@@ -8,12 +8,12 @@ namespace PokemonCommon.Characters
 
         public List<Pokemon> PokemonCollection { get; set; } = new List<Pokemon>();
 
-        // Detta är en statisk metod. Statiska metoder anropas via typen och inte via objekt.
         public Trainer(string name)
         {
             Name = name;
         }
 
+        // Detta är en instans-metod. Till skillnad från statiska metoder anropas dessa enbart genom objekt.
         public void Catch(Pokemon pokemon)
         {
             PokemonCollection.Add(pokemon);
