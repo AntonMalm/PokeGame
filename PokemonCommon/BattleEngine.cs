@@ -9,9 +9,10 @@ public static class BattleEngine
     // Detta är en statisk metod. Statiska metoder anropas via typen och inte via objekt.
     public static void MakeAttack(Pokemon target, Attack attack)
     {
-        Effectiveness effectivness = CheckEffectiveness( attack.Type, target.Types.ToArray());
-        double modifier = (double)effectivness / 100.0;
-        target.HealthPoints -= (attack.Damage * modifier);
+        Effectiveness effectiveness = CheckEffectiveness(attack.Type, target.Types.ToArray());
+        double modifier = (double)effectiveness / 100.0;
+
+        target.HealthPoints -= attack.Damage * modifier;
     }
 
     public static Effectiveness CheckEffectiveness(PokeTypes attackType, PokeTypes[] targetTypes)

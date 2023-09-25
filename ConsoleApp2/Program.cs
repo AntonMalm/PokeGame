@@ -1,4 +1,5 @@
-﻿using PokemonCommon.Characters;
+﻿using PokemonCommon;
+using PokemonCommon.Characters;
 using PokemonCommon.Enums;
 using PokemonCommon.Pokemons;
 using PokemonCommon.Pokemons.Attacks;
